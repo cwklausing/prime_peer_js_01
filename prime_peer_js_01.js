@@ -11,30 +11,26 @@ value = value + "11";
 var array = [];
 
 function arrayCheck (a) {
-  for (i=0; i < value.length; i++) {
+  for (var i=0; i < value.length; i++) {
     array.push(a.charAt(i))
   }
   return array;
 }
 
+array = arrayCheck(value);
+
 array.shift();
 array.pop();
 
-console.log(value)
+console.log(array);
 
-var prime = [];
-
-function backwards (b) {
-  for (i= value.length; i > 0; i--) {
-    prime.push(b[i-1])
-  }
+var prime = '';
+//Step 6
+for (var i = array.length; i > 0; i--) {
+    prime += array[i - 1];
 }
 
-backwards(value);
 console.log(prime)
-
-value = value.join('');
-prime = prime.join('');
 
 //Step 7
 value = parseInt(value);
@@ -45,7 +41,7 @@ console.log(prime);
 
 //Step 8
 value += prime;
-
+console.log(value);
 //Step 9
 if (value < 60) {
   value = 14;
@@ -61,18 +57,18 @@ while (i > 0) {
   value++;
   i--;
 }
+console.log(value);
 //Step 11
 function makeString (val) {
   val = val.toString();
   if (val.length > 1) {
-    val.slice(0);
+    val = val.slice(1, val.length);
   }
-  value = val;
   return val;
 };
 
 //step 12
-makeString(value);
+value = makeString(value);
 
 //step 13
 console.log(value);

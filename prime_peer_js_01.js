@@ -17,8 +17,6 @@ function arrayCheck (a) {
   return array;
 }
 
-value = arrayCheck(value);
-
 value.shift();
 value.pop();
 

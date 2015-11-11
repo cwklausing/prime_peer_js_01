@@ -17,8 +17,8 @@ function arrayCheck (a) {
   return array;
 }
 
-value.shift();
-value.pop();
+array.shift();
+array.pop();
 
 console.log(value)
 

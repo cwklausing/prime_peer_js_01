@@ -67,7 +67,7 @@ while (i > 0) {
 function makeString (val) {
   val = val.toString();
   if (val.length > 1) {
-    val.shift();
+    val.slice(0);
   }
   value = val;
   return val;
